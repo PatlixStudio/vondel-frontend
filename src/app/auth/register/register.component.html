@@ -1,3 +1,53 @@
-<p>
-  register works!
-</p>
+<ion-content class="ion-padding">
+
+  <ion-grid class="full-height">
+    <ion-row class="full-height ion-justify-content-center ion-align-items-center">
+      <ion-col size="12" size-md="6" size-lg="4">
+
+        <ion-card class="register-card">
+          <ion-card-header>
+            <ion-card-title class="title ion-text-center">Create Account</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+
+            <form [formGroup]="form" (ngSubmit)="submit()">
+
+              <ion-item>
+                <ion-label position="stacked">Username</ion-label>
+                <ion-input type="text" formControlName="username"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="stacked">Email</ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="stacked">Password</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="stacked">Confirm Password</ion-label>
+                <ion-input type="password" formControlName="confirmPassword"></ion-input>
+              </ion-item>
+
+              <ion-button expand="block" type="submit" [disabled]="form.invalid">
+                Register
+              </ion-button>
+
+              <ion-button expand="block" fill="clear" routerLink="/login">
+                Already have an account? Login
+              </ion-button>
+
+            </form>
+
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

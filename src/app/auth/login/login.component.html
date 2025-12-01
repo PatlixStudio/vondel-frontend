@@ -1,3 +1,43 @@
-<p>
-  login works!
-</p>
+<ion-content class="ion-padding">
+
+  <ion-grid class="login-grid full-height">
+    <ion-row class=" full-height ion-justify-content-center ion-align-items-center">
+      <ion-col
+        size="12"
+        size-md="8"
+        size-lg="4"
+      >
+        <div class="login-card">
+
+          <h1 class="title">Vondel Login</h1>
+
+          <form [formGroup]="form" (ngSubmit)="submit()">
+
+            <ion-item>
+              <ion-label position="stacked">Email</ion-label>
+              <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Password</ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <ion-button expand="block" type="submit" [disabled]="form.invalid">
+              Login
+            </ion-button>
+
+            <p>Don't have an account?</p>
+
+            <ion-button expand="block" fill="clear" routerLink="/register">
+               Register
+            </ion-button>
+
+          </form>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

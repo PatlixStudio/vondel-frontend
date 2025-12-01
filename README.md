@@ -103,7 +103,7 @@ docker compose logs -f frontend
 ```bash
 docker compose stop frontend
 ```
-
+sudo chown -R $(whoami):$(whoami) /home/{{username}}/Development/vondel/vondel-frontend
 ---
 
 ## 8. Contributing
