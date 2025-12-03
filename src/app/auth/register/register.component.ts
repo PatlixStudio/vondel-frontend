@@ -4,6 +4,9 @@ import { AuthService } from '../auth.service';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
+import { addIcons } from 'ionicons';
+import { keyOutline, personOutline, atOutline } from 'ionicons/icons';
+
 @Component({
   selector: 'app-register',
   imports: [IonicModule, ReactiveFormsModule, RouterModule],
@@ -13,6 +16,12 @@ import { RouterModule } from '@angular/router';
 export class RegisterComponent {
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
+
+
+  constructor() {
+    addIcons({ keyOutline, personOutline, atOutline });
+  }
+
 
   form = this.fb.group({
     username: ['', Validators.required],
@@ -26,7 +35,7 @@ export class RegisterComponent {
       const { email, password } = this.form.value;
 
       this.authService.register({
-        email: email!,          
+        email: email!,
         password: password!,
       }).subscribe({
         next: (res) => console.log('Registered!', res),

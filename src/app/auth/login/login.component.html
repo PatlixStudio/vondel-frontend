@@ -2,25 +2,25 @@
 
   <ion-grid class="login-grid full-height">
     <ion-row class=" full-height ion-justify-content-center ion-align-items-center">
-      <ion-col
-        size="12"
-        size-md="8"
-        size-lg="4"
-      >
+      <ion-col size="12" size-md="8" size-lg="4">
         <div class="login-card">
-
-          <h1 class="title">Vondel Login</h1>
+          <img src="assets/logo/vondel_logo.png" width="200">
+          <h1 class="title">Login</h1>
 
           <form [formGroup]="form" (ngSubmit)="submit()">
 
             <ion-item>
-              <ion-label position="stacked">Email</ion-label>
-              <ion-input type="email" formControlName="email"></ion-input>
+              <ion-label position="stacked">Email or Username</ion-label>
+              <ion-input type="email" formControlName="email">
+                 <ion-icon slot="end" name="person-outline" color="primary"></ion-icon>
+              </ion-input>
             </ion-item>
 
             <ion-item>
               <ion-label position="stacked">Password</ion-label>
-              <ion-input type="password" formControlName="password"></ion-input>
+              <ion-input type="password" formControlName="password">
+                <ion-icon slot="end" name="key-outline" color="primary"></ion-icon>
+              </ion-input>
             </ion-item>
 
             <ion-button expand="block" type="submit" [disabled]="form.invalid">
@@ -29,8 +29,8 @@
 
             <p>Don't have an account?</p>
 
-            <ion-button expand="block" fill="clear" routerLink="/register">
-               Register
+            <ion-button expand="block" fill="red" routerLink="/register">
+              Register
             </ion-button>
 
           </form>

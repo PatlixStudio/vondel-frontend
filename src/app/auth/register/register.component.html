@@ -4,47 +4,52 @@
     <ion-row class="full-height ion-justify-content-center ion-align-items-center">
       <ion-col size="12" size-md="6" size-lg="4">
 
-        <ion-card class="register-card">
-          <ion-card-header>
-            <ion-card-title class="title ion-text-center">Create Account</ion-card-title>
-          </ion-card-header>
+        <div class="register-card">
 
-          <ion-card-content>
+          <img src="assets/logo/vondel_logo.png" width="200">
+          <h1 class="title">Register</h1>
 
-            <form [formGroup]="form" (ngSubmit)="submit()">
+          <form [formGroup]="form" (ngSubmit)="submit()">
 
-              <ion-item>
-                <ion-label position="stacked">Username</ion-label>
-                <ion-input type="text" formControlName="username"></ion-input>
-              </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Username</ion-label>
+              <ion-input type="text" formControlName="username">
+                <ion-icon slot="end" name="person-outline" color="primary"></ion-icon>
+              </ion-input>
+            </ion-item>
 
-              <ion-item>
-                <ion-label position="stacked">Email</ion-label>
-                <ion-input type="email" formControlName="email"></ion-input>
-              </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Email</ion-label>
+              <ion-input type="email" formControlName="email">
+                <ion-icon slot="end" name="at-outline" color="primary"></ion-icon>
+              </ion-input>
+            </ion-item>
 
-              <ion-item>
-                <ion-label position="stacked">Password</ion-label>
-                <ion-input type="password" formControlName="password"></ion-input>
-              </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Password</ion-label>
+              <ion-input type="password" formControlName="password">
+                <ion-icon slot="end" name="key-outline" color="primary"></ion-icon>
+              </ion-input>
+              
+            </ion-item>
 
-              <ion-item>
-                <ion-label position="stacked">Confirm Password</ion-label>
-                <ion-input type="password" formControlName="confirmPassword"></ion-input>
-              </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Confirm Password</ion-label>
+              <ion-input type="password" formControlName="confirmPassword">
+                <ion-icon slot="end" name="key-outline" color="primary"></ion-icon>
+              </ion-input>
+            </ion-item>
 
-              <ion-button expand="block" type="submit" [disabled]="form.invalid">
-                Register
-              </ion-button>
+            <ion-button expand="block" type="submit" [disabled]="form.invalid">
+              Register
+            </ion-button>
 
-              <ion-button expand="block" fill="clear" routerLink="/login">
-                Already have an account? Login
-              </ion-button>
+            <ion-button expand="block" fill="clear" routerLink="/login">
+              Already have an account? Login
+            </ion-button>
 
-            </form>
-
-          </ion-card-content>
-        </ion-card>
+          </form>
+        </div>
 
       </ion-col>
     </ion-row>
