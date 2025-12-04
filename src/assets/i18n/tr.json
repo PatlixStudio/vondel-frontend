@@ -1,0 +1,19 @@
+{
+    "LOGIN": {
+        "TITLE": "Giriş",
+        "EMAIL_LABEL": "E-posta veya Kullanıcı Adı",
+        "PASSWORD_LABEL": "Şifre",
+        "BUTTON": {
+            "LOGIN": "Giriş Yap",
+            "REGISTER": "Kayıt Ol"
+        },
+        "NO_ACCOUNT": "Hesabınız yok mu?"
+    },
+    "NAVIGATION": {
+        "TITLE": "Vondel Mükemmellik",
+        "LOGOUT": "Çıkış",
+        "MENU_TITLE": "Menü",
+        "DASHBOARD": "Gösterge Paneli",
+        "PROFILE": "Profil"
+    }
+}

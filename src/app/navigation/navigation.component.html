@@ -1,0 +1,41 @@
+@if(isLoggedIn | async) {
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+      <div class="logo-title">
+        <img src="assets/logo/vondel_logo_1.png" width="40">
+        {{ 'NAVIGATION.TITLE' | translate }}
+      </div>
+ 
+    <ion-buttons slot="end">
+      <ion-chip>
+        <ion-label color="light">Welcome User</ion-label>
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </ion-chip>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="first" contentId="main-content" type="overlay">
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title>{{ 'NAVIGATION.MENU_TITLE' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/dashboard">{{ 'NAVIGATION.DASHBOARD' | translate }} <ion-icon slot="end" name="apps-outline"></ion-icon></ion-item>
+      <ion-item routerLink="/profile">{{ 'NAVIGATION.PROFILE' | translate }} <ion-icon slot="end" name="person-outline"></ion-icon></ion-item>
+      <ion-item (click)="logout()">
+        {{ 'NAVIGATION.LOGOUT' | translate }}
+        <ion-icon slot="end" name="log-out-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+}

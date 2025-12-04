@@ -1,0 +1,19 @@
+{
+    "LOGIN": {
+        "TITLE": "Anmelden",
+        "EMAIL_LABEL": "E-Mail oder Benutzername",
+        "PASSWORD_LABEL": "Passwort",
+        "BUTTON": {
+            "LOGIN": "Anmelden",
+            "REGISTER": "Registrieren"
+        },
+        "NO_ACCOUNT": "Sie haben kein Konto?"
+    },
+    "NAVIGATION": {
+        "TITLE": "Vondel Mükemmellik",
+        "LOGOUT": "Çıkış",
+        "MENU_TITLE": "Menü",
+        "DASHBOARD": "Gösterge Paneli",
+        "PROFILE": "Profil"
+    }
+}

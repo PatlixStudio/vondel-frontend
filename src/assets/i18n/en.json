@@ -1,0 +1,19 @@
+{
+    "LOGIN": {
+        "TITLE": "Login",
+        "EMAIL_LABEL": "Email or Username",
+        "PASSWORD_LABEL": "Password",
+        "BUTTON": {
+            "LOGIN": "Login",
+            "REGISTER": "Register"
+        },
+        "NO_ACCOUNT": "Don't have an account?"
+    },
+    "NAVIGATION": {
+        "TITLE": "Vondel Excellence",
+        "LOGOUT": "Logout",
+        "MENU_TITLE": "Menu",
+        "DASHBOARD": "Dashboard",
+        "PROFILE": "Profile"
+    }
+}

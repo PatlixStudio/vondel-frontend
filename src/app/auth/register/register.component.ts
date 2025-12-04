@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import { addIcons } from 'ionicons';
 import { keyOutline, personOutline, atOutline } from 'ionicons/icons';
@@ -16,7 +16,7 @@ import { keyOutline, personOutline, atOutline } from 'ionicons/icons';
 export class RegisterComponent {
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
-
+  private router = inject(Router);
 
   constructor() {
     addIcons({ keyOutline, personOutline, atOutline });
@@ -32,16 +32,19 @@ export class RegisterComponent {
 
   submit() {
     if (this.form.valid) {
-      const { email, password } = this.form.value;
+      const { username, email, password } = this.form.value;
 
       this.authService.register({
+        username: username!,
         email: email!,
         password: password!,
       }).subscribe({
-        next: (res) => console.log('Registered!', res),
+        next: (res) => {
+          console.log('Registered!', res);
+          this.router.navigate(['/login']);
+        },
         error: (err) => console.error('Registration error', err),
       });
     }
   }
-
 }

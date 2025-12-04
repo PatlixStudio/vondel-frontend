@@ -1,36 +1,40 @@
 <ion-content class="ion-padding">
-
   <ion-grid class="login-grid full-height">
     <ion-row class=" full-height ion-justify-content-center ion-align-items-center">
       <ion-col size="12" size-md="8" size-lg="4">
         <div class="login-card">
           <img src="assets/logo/vondel_logo.png" width="200">
-          <h1 class="title">Login</h1>
+          <h1 class="title">{{ 'LOGIN.TITLE' | translate }}</h1>
 
           <form [formGroup]="form" (ngSubmit)="submit()">
 
             <ion-item>
-              <ion-label position="stacked">Email or Username</ion-label>
-              <ion-input type="email" formControlName="email">
-                 <ion-icon slot="end" name="person-outline" color="primary"></ion-icon>
+              <ion-label position="stacked">{{ 'LOGIN.EMAIL_LABEL' | translate }}</ion-label>
+              <ion-input type="email" formControlName="email" [errorText]="getEmailErrorText()">
+                <ion-icon slot="end" name="person-outline" color="primary"></ion-icon>
               </ion-input>
             </ion-item>
 
             <ion-item>
-              <ion-label position="stacked">Password</ion-label>
-              <ion-input type="password" formControlName="password">
+              <ion-label position="stacked">{{ 'LOGIN.PASSWORD_LABEL' | translate }}</ion-label>
+              <ion-input type="password" formControlName="password" [errorText]="getPasswordErrorText()">
                 <ion-icon slot="end" name="key-outline" color="primary"></ion-icon>
               </ion-input>
             </ion-item>
 
+            <!-- General login error -->
+            <ion-text color="danger" *ngIf="loginError && !form.invalid">
+              {{ loginError }}
+            </ion-text>
+
             <ion-button expand="block" type="submit" [disabled]="form.invalid">
-              Login
+              {{ 'LOGIN.BUTTON.LOGIN' | translate }}
             </ion-button>
 
-            <p>Don't have an account?</p>
+            <p>{{ 'LOGIN.NO_ACCOUNT' | translate }}</p>
 
             <ion-button expand="block" fill="red" routerLink="/register">
-              Register
+              {{ 'LOGIN.BUTTON.REGISTER' | translate }}
             </ion-button>
 
           </form>
@@ -39,5 +43,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>
