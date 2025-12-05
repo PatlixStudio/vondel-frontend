@@ -1,9 +1,69 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" [fullscreen]="false">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="12" size-md="8" size-lg="4">
+        <ion-title style="margin-top: 50px">
+          Today's Quote:<br> <i>"Small steps creates big changes"</i>
+        </ion-title>
+        <ion-card style="margin-top: 50px">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="barbell-outline"></ion-icon> My Program
+            </ion-card-title>
+            <ion-card-subtitle></ion-card-subtitle>
+          </ion-card-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+          <ion-card-content>
+            Today's Egserzie: Shoulder Mobility
+          </ion-card-content>
+
+          <ion-button expand="block">View Details</ion-button>
+        </ion-card>
+
+        <ion-card color="primary">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="chatbox-ellipses-outline"></ion-icon> VondelX AI Chat
+            </ion-card-title>
+            <ion-card-subtitle></ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Chat with Vondel-AI. Ask your questions
+          </ion-card-content>
+
+          <ion-button expand="block" color="light">Start Chatting</ion-button>
+        </ion-card>
+
+
+        <ion-card color="warning">
+          <ion-card-header>
+            <ion-card-title><ion-icon name="help-circle-outline"></ion-icon> VondelX AI Consultant</ion-card-title>
+            <ion-card-subtitle></ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Take Vondel AI Assistant prepared egsersize programs
+          </ion-card-content>
+
+          <ion-button expand="block" color="light">Take Egzersize</ion-button>
+        </ion-card>
+
+
+        <ion-card color="success">
+          <ion-card-header>
+            <ion-card-title><ion-icon name="calendar-number-outline"></ion-icon> Book a Randevu</ion-card-title>
+            <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+          </ion-card-header>
+
+          <ion-card-content>
+            Book a face to face screening with physiotheraphists.
+          </ion-card-content>
+
+          <ion-button expand="block" color="light">Book Now</ion-button>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
